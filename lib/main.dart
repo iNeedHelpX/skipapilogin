@@ -148,26 +148,27 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(title: Text("Secret Data Screen")),
         body: Center(
           child: FutureBuilder(
-              future: http.read(
-                  "https://api-courier.skipthedishes.com/v2/couriers/$id",
-                  headers: {
-                    "Transfer-Encoding": "chunked",
+            future: http.read(
+                "https://api-courier.skipthedishes.com/v2/couriers/$id",
+                headers: {
+                  "Transfer-Encoding": "chunked",
 
-                    //Don't worry about this hard coded value, its a fake app token I made
-                    "app-token": "decff1f4-fd24-4e6b-8edd-4f20df798e9b",
-                    "token": token
-                  }),
-              builder: (context, snapshot) => snapshot.hasData
-                  ? Column(
-                      children: <Widget>[
-                        Text("${payload['name']}, here's the data:"),
-                        Text(snapshot.data,
-                            style: Theme.of(context).textTheme.bodyText1)
-                      ],
-                    )
-                  : snapshot.hasError
-                      ? Text("cool")
-                      : CircularProgressIndicator()),
+                  //Don't worry about this hard coded value, its a fake app token I made
+                  "app-token": "decff1f4-fd24-4e6b-8edd-4f20df798e9b",
+                  "token": token
+                }),
+            builder: (context, snapshot) => snapshot.hasData
+                ? Column(
+                    children: <Widget>[
+                      Text("${payload['name']}, here's the data:"),
+                      Text(snapshot.data,
+                          style: Theme.of(context).textTheme.bodyText1)
+                    ],
+                  )
+                : snapshot.hasError
+                    ? Text("You're here at the wrong place")
+                    : CircularProgressIndicator(),
+          ),
         ),
       );
 }
