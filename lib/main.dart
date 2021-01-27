@@ -61,7 +61,7 @@ class LoginPage extends StatelessWidget {
           content: Text(text),
         ),
       );
-
+//Handles login page. This is the api where we login to the courier portal
   Future<String> attemptLogIn(String email, String password) async {
     var res = await http.post(
         "https://api-courier.skipthedishes.com/v1/couriers/login",
