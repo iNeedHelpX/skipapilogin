@@ -152,6 +152,8 @@ class HomePage extends StatelessWidget {
                   "https://api-courier.skipthedishes.com/v2/couriers/$id",
                   headers: {
                     "Transfer-Encoding": "chunked",
+
+                    //Don't worry about this hard coded value, its a fake app token I made
                     "app-token": "decff1f4-fd24-4e6b-8edd-4f20df798e9b",
                     "token": token
                   }),
