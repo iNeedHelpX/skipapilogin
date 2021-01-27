@@ -166,7 +166,8 @@ class HomePage extends StatelessWidget {
                     ],
                   )
                 : snapshot.hasError
-                    ? Text("You're here at the wrong place")
+                    ? Text(
+                        "You're here at the wrong place, but be glad this method exists")
                     : CircularProgressIndicator(),
           ),
         ),
