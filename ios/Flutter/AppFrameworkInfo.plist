@@ -3,7 +3,11 @@
 <plist version="1.0">
 <dict>
   <key>CFBundleDevelopmentRegion</key>
+<<<<<<< HEAD
   <string>en</string>
+=======
+  <string>$(DEVELOPMENT_LANGUAGE)</string>
+>>>>>>> changed api calls
   <key>CFBundleExecutable</key>
   <string>App</string>
   <key>CFBundleIdentifier</key>

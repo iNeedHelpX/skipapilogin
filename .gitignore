@@ -39,8 +39,11 @@ app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+<<<<<<< HEAD
 
 # Android Studio will place build artifacts here
 /android/app/debug
 /android/app/profile
 /android/app/release
+=======
+>>>>>>> changed api calls

@@ -26,17 +26,33 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
+<<<<<<< HEAD
     compileSdkVersion 30
+=======
+    compileSdkVersion 29
+>>>>>>> changed api calls
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
+<<<<<<< HEAD
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.jp.skipapilogin"
         minSdkVersion 16
         targetSdkVersion 30
+=======
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.jp.dashapi"
+        minSdkVersion 16
+        targetSdkVersion 29
+>>>>>>> changed api calls
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }

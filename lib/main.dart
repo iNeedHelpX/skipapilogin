@@ -1,15 +1,21 @@
+<<<<<<< HEAD
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'dart:convert' show json, utf8, base64, ascii;
 
 final storage = FlutterSecureStorage();
+=======
+import 'package:dashapi/pages/login.dart';
+import 'package:flutter/material.dart';
+>>>>>>> changed api calls
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+<<<<<<< HEAD
   Future<String> get appTokenOrEmpty async {
     var token = await storage.read(key: "token");
     if (token == null) return "";
@@ -172,4 +178,36 @@ class HomePage extends StatelessWidget {
           ),
         ),
       );
+=======
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Image Loader',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: 'Poppins',
+        primaryColor: Colors.white,
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          elevation: 0,
+          foregroundColor: Colors.white,
+        ),
+        accentColor: Color.fromARGB(255, 142, 83, 227),
+        textTheme: TextTheme(
+          headline1: TextStyle(fontSize: 22.0, color: Colors.redAccent),
+          headline2: TextStyle(
+            fontSize: 24.0,
+            fontWeight: FontWeight.w700,
+            color: Colors.redAccent,
+          ),
+          bodyText1: TextStyle(
+            fontSize: 14.0,
+            fontWeight: FontWeight.w400,
+            color: Colors.blueAccent,
+          ),
+        ),
+      ),
+      home: LoginPage(),
+    );
+  }
+>>>>>>> changed api calls
 }
